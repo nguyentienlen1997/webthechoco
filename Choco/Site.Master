@@ -1,0 +1,57 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="Choco.Site" %>
+
+<%@ Register Src="~/UC/UChead.ascx" TagPrefix="uc1" TagName="UChead" %>
+<%@ Register Src="~/UC/UCfooter.ascx" TagPrefix="uc1" TagName="UCfooter" %>
+<%@ Register Src="~/UC/UCcss.ascx" TagPrefix="uc1" TagName="UCcss" %>
+<%@ Register Src="~/UC/UCjs.ascx" TagPrefix="uc1" TagName="UCjs" %>
+
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>The Choco - begin with passion</title>
+    <uc1:UCcss runat="server" id="UCcss" />
+    <uc1:UCjs runat="server" id="UCjs" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body data-rsssl="1" class="home page-template page-template-page_templates page-template-template-home page-template-page_templatestemplate-home-php page page-id-45 wd-site-languge-vi loaded">
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+    </div>
+        <div class="body-wrapper">
+            <header id="header" class="header sticky ">
+                <uc1:UChead runat="server" id="UChead" />
+            </header> <!-- END HEADER  -->
+
+        <!--Container-->
+            <form id="form1" runat="server">
+                <div id="container">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </form>
+        <!-- END Container  -->
+            <footer id="footer" class="footer">
+                <uc1:UCfooter runat="server" id="UCfooter" />
+            </footer> <!-- END FOOOTER  -->   
+            <script>
+            new WOW().init();
+            jQuery(document).ready(function ($) {
+                $(".click_scroll_to_order a[href^='#']").click(function (e) {
+                    e.preventDefault();
+
+                    var position = $($(this).attr("href")).offset().top;
+
+                    $("body, html").animate({
+                        scrollTop: position
+                    }, 1500 /* speed */);
+                });
+            });
+
+        </script>
+        <script type="text/javascript" src="https://thotaycosmetics.com/wp-includes/js/wp-embed.min.js?ver=5.0.3"></script>
+        </div>
+</body>
+</html>

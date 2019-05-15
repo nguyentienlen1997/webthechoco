@@ -1,0 +1,2 @@
+C:\Users\Ben's Nguyen\source\repos\Choco\Choco\obj\Debug\Choco.csproj.CoreCompileInputs.cache
+C:\Users\Ben's Nguyen\source\repos\Choco\Choco\obj\Debug\Choco.csprojAssemblyReference.cache

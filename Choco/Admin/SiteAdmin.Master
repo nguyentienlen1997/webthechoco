@@ -1,0 +1,46 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="SiteAdmin.master.cs" Inherits="Choco.Admin.SiteAdmin" %>
+
+<%@ Register Src="~/Admin/UCadmin/UCheaderAdmin.ascx" TagPrefix="uc1" TagName="UCheaderAdmin" %>
+<%@ Register Src="~/Admin/UCadmin/UCleftAdmin.ascx" TagPrefix="uc1" TagName="UCleftAdmin" %>
+<%@ Register Src="~/UC/UCfooter.ascx" TagPrefix="uc1" TagName="UCfooter" %>
+
+
+
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Quản lý</title>
+    <link href="../bootstrap3/css/bootstrap.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div class="container table-bordered">
+         <div class="row">
+             <div class="col-md-12">
+                 <uc1:UCheaderAdmin runat="server" ID="UCheaderAdmin" />
+            </div>
+         </div>
+    </div>
+    <div class="container table-bordered">
+            <article class="row">
+                <aside class="col-md-4 table-bordered">
+                    <uc1:UCleftAdmin runat="server" ID="UCleftAdmin" />
+                </aside>
+                <section class="col-md-8 table-bordered">
+                     <form id="form1" runat="server">
+                        <div>
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </div>
+                    </form>
+                </section>
+            </article>
+    </div>
+    <footer class="btn-default text-center text-capitalize" style="height: 200px; padding-top: 50px;">
+        <uc1:UCfooter runat="server" ID="UCfooter" />
+    </footer>
+</body>
+</html>
